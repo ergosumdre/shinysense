@@ -11,7 +11,7 @@ const image_size = Object.assign({width: 300, height: 300}, output_size);
 
 const shutter_text = {
   taking: 'Sending photo...',
-  ready: 'Take photo!',
+  ready: 'Tap here!',
 };
 
 const no_camera_message = "Shiny can't get access to cameras. This is a privacy consideration. Make sure you are trying from a secure (https, or localhost) site.";
@@ -32,11 +32,13 @@ div.st({
 const shutter = div.selectAppend('button')
   .text(shutter_text.ready)
   .st({
-    width: '80%',
-    height: '40px',
-    fontSize: '24px',
+    width: '50%',
+    height: '200px',
+    fontSize: '42px',
     borderRadius: '8px',
     fontFamily: system_font,
+    background: "DeepSkyBlue",
+    color: "white"
   });
 
 const camera_chooser = div.selectAppend('select.camera_chooser')
